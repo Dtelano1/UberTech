@@ -1,0 +1,42 @@
+<template name="sponsors">
+
+	<h1>IM CODING!</h1>
+	<table class="table table-bordered table-stripped">
+	<thead>
+	<tr>
+		<td>Company</td>
+		<td>Amount</td>
+		<td>Date</td>
+		<td>Ceo</td>
+	</tr>
+</thead>
+<tbody>
+	{{#each s in sponsorData}}
+<tr>
+	<td>{{s.name}}  </td>
+	<td>{{s.amt}}   </td>
+	<td>{{s.date}}  </td>
+	<td>{{s.ceo}} </td>
+</tr>
+		{{/each}}
+</tbody>
+</table>
+
+
+
+
+
+
+<hr>
+{{s.name}}: {{s.amt}}
+
+{{time}}
+
+
+<hr>
+<ol>
+	{{#each stuff in randomStuff}}
+	<Li>{{stuff}}</li>
+		{{/each}}
+	</ol>
+</template>
