@@ -1,0 +1,25 @@
+<template name="mechanicprofile">
+  Full Name:
+  <br>
+  <input type="text" id="js-name" value="{{user.name}}">
+  <br>
+  Email:
+  <br>
+  <input type="text" id="js-email" value="{{user.email}}">
+  <br>
+  Phone Number
+  <br>
+  <input type="number" id="js-phone" value="{{user.phone}}">
+  <br>
+  Able to Repair:
+  <br>
+  <input type="checkbox" id="js-iphone" value="{{user.iphone}}">iPhones
+  <br>
+  <input type="checkbox" id="js-android" value="{{user.android}}">Androids
+  <br>
+  <input type="checkbox" id="js-imac" value="{{user.imac}}">iMacs
+  <br>
+  <input type="checkbox" id="js-pc" value="{{user.pc}}">Windows PCs
+
+  <button id="js-submit" class="btn btn-info">Update Profile</button>
+</template>
