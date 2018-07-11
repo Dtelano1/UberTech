@@ -6,13 +6,13 @@ Template.mechanicprofile.events({
     console.log('just read ' +email );
     phone = instance.$('#js-phone').val();
     console.log('just read ' + phone);
-    iphone = instance.$('#js-iphone').attr(checked);
+    iphone = instance.$("#js-iphone").is(':checked');
     console.log('just read ' + iphone);
-    android = instance.$('#js-android').attr(checked);
+    android = instance.$("#js-android").is(':checked');
     console.log('just read ' + android);
-    imac = instance.$('#js-imac').attr(checked);
+    imac = instance.$("#js-imac").is(':checked');
     console.log('just read ' + imac);
-    pc = instance.$('#js-pc').attr(checked);
+    pc = instance.$("#js-pc").is(':checked');
     console.log('just read ' + pc);
     this.user.name = name;
     this.user.email = email;
