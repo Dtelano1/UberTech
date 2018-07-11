@@ -1,6 +1,6 @@
 const team =
   [
-    {name:"Leah Namdar-Cohen"    , email: "leahnamdarcohen@gmail.com" },
+    {name:"Leah Namdar-Cohen", email: "leahnamdarcohen@gmail.com" },
     {name:"Sarah Bernstein", email:"sarahhb25@gmail.com"},
     {name:"Dylan Telano", email:"dylantelano@gmail.com"},
     {name:"William Martin-Gleason", email:"williammartingleason@gmail.com"},
