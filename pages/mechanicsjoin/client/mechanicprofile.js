@@ -17,10 +17,10 @@ Template.mechanicprofile.events({
     this.user.name = name;
     this.user.email = email;
     this.user.phone = phone;
-    this.user.iphone = iphone;
-    this.user.android = android;
-    this.user.imac = imac;
-    this.user.pc = pc;
+    //this.user.iphone = iphone;
+    //this.user.android = android;
+    //this.user.imac = imac;
+    //this.user.pc = pc;
     Profiles.update(this.user._id,this.user);
   }
 })
