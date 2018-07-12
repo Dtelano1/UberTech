@@ -1,7 +1,11 @@
 #heading{color:green;
   font-family: "Times New Roman", Times, serif;
-
-
+}
+#boom
+{
+  color:white;
+  background-color:black;
+  font-size:30px;
 
 }
 
@@ -21,12 +25,3 @@ div {
 }
 
 /* The animation code */
-@keyframes example {
-    0%   {background-color: lightblue;}
-    15% {background-color:blue;}
-    25%  {background-color: orange;}
-    35%  {background-color: yellow;}
-    50%  {background-color: blue;}
-    75% {background-color:lightblue;}
-    100% {background-color:white;}
-}
