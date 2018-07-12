@@ -1,4 +1,18 @@
 <template name="searchresults">
-<h1>  This is a demo text </h1>
-
+  <table>
+    <thead>
+      <tr>
+        <td>Mechanic</td>
+        <td>Rating</td>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each profile in profiles}}
+        <tr>
+          <td>{{profile.name}}</td>
+          <td>5/5</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
 </template>
