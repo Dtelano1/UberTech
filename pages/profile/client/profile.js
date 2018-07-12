@@ -9,7 +9,7 @@ Template.profile.events({
     return
 
     Reviews.insert({
-        review:review, name:name, rating:rating
+        review:review, name:name, rating:rating,
     });
   }
 });
