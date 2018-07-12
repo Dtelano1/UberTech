@@ -1,5 +1,9 @@
-#heading{color:green;
+#heading{color:black;
   font-family: "Times New Roman", Times, serif;
+
+}
+.head h1{
+  font-size:100px;
 }
 #boom
 {
@@ -12,16 +16,26 @@
 
 
 @keyframes example {
-    from {background-color: white;}
-    to {background-color: blue;}
+    from {color: white;}
+    to {color: blue;}
 }
 
 
-div {
+#heading {
 
     background-color: white;
     animation-name: example;
-    animation-duration: 0s;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
 }
 
 /* The animation code */
+@keyframes example {
+    0%   {color: lightblue;}
+    15% {color:blue;}
+    25%  {color: orange;}
+    35%  {color: yellow;}
+    50%  {color: blue;}
+    75% {color:lightblue;}
+    100% {color:black;}
+}
