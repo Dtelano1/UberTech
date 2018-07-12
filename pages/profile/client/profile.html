@@ -30,15 +30,6 @@
 
     <div class="col-md-5 col-md-offset-1 bg-info">
       <h1>User Feedback</h1>
-      <h3>Cranjus McBasketball</h3>
-      <p>★ ★ ★ ★ ★
-      Definitely 5/5 stars, helped fix my iPhone after I dropped it in the toilet and accidently flushed.</p>
-      <h3>Octavio Jumbotron the 3rd</h3>
-      <p>★ ★ ★ ★ ☆
-      Could not believe that he fixed my computer after I chucked my keyboard through the screen due to dying in Fortnite. 4/5 Stars.</p>
-      <h3>John Smith</h3>
-      <p>★ ☆ ☆ ☆ ☆
-      Fixed my iPhone perfectly, but didn't say "bless you" when I sneezed. 1/5 stars.</p>
       {{#each Reviews}}
         {{> review}}
       {{/each}}
@@ -47,11 +38,15 @@
       <form>
         <div>
           <label for="name">Name:</label>
-          <input type="text" id="name" name="user_name" />
+          <input type="text" id="name" name="user_name" required>
         </div>
         <div>
           <label for="msg">Review:</label>
           <textarea id="review" name="user_message"></textarea>
+        </div>
+        <div>
+          <label for="rating">Rating:</label>
+          <input type="number" id="rating" name="quantity" min="1" max="5" required>
         </div>
         <div class="button">
           <button type="submit">Submit</button>
@@ -70,5 +65,10 @@
 </template>
 
 <template name="review">
-  name:{{name}}<br>review:{{review}}<br><hr>
+  <h3>{{name}}</h3>
+  {{review}}
+  <br>
+  {{rating}}/5 Stars
+  <br>
+  <hr>
 </template>

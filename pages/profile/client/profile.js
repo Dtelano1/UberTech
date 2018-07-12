@@ -3,9 +3,10 @@ Template.profile.events({
     Meteor.call("test1",function(e,r){console.log(r)});
     const review = $("#review").val();
     const name = $("#name").val();
+    const rating = $("#rating").val();
 
     Reviews.insert({
-        review:review, name:name
+        review:review, name:name, rating:rating
     });
   }
 });
