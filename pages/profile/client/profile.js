@@ -4,6 +4,9 @@ Template.profile.events({
     const review = $("#review").val();
     const name = $("#name").val();
     const rating = $("#rating").val();
+    console.log("review="+review)
+    if(review==""||rating=""||name="")
+    return
 
     Reviews.insert({
         review:review, name:name, rating:rating
