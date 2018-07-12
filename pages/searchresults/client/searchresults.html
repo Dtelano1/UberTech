@@ -1,5 +1,5 @@
 <template name="searchresults">
-  <table>
+  <table class="table">
     <thead>
       <tr>
         <td>Mechanic</td>
@@ -10,7 +10,7 @@
       {{#each profile in profiles}}
         <tr>
           <td>{{profile.name}}</td>
-          <td>5/5</td>
+          <td>{{profile.rating}}/5, from {{profile.reviews}} reviews</td>
         </tr>
       {{/each}}
     </tbody>
