@@ -6,27 +6,8 @@ Template.mechanicprofile.events({
     console.log('just read ' +email );
     phone = instance.$('#js-phone').val();
     console.log('just read ' + phone);
-    iphone = instance.$("#js-iphone").is(':checked');
-    console.log('just read ' + iphone);
-    android = instance.$("#js-android").is(':checked');
-    console.log('just read ' + android);
-    imac = instance.$("#js-imac").is(':checked');
-    console.log('just read ' + imac);
-    pc = instance.$("#js-pc").is(':checked');
-    console.log('just read ' + pc);
-    //console.log("die in whole");
-    //this.user.name = name;
-  //  this.user.email = email;
-    //this.user.phone = phone;
-  //  this.user.iphone = iphone;
-  //  this.user.android = android;
-  //  this.user.imac = imac;
-  //  this.user.pc = pc;
-  //  this.user.isMechanic = true;
-    //console.log('die in hole');
-    //Pokedex.insert(ename:"dieinsect");
-    Profiles.insert({name:name,owner:Meteor.userId(),email:email,phone:phone,iphone:iphone,android:android,imac:imac,pc:pc});
+    repairs = instance.$('#js-repairs').val();
+    Profiles.insert({name:name,owner:Meteor.userId(),email:email,phone:phone,repairs:repairs});
     console.log(Profiles.findOne({name:name}));
-    //Profiles.update({name:name,email:email,phone:phone,iphone:iphone,android:android,imac:imac,pc:pc});
   }
 })
