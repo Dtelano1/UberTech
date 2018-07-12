@@ -1,19 +1,22 @@
 <template name="home">
 
+<div class="container">
 	<div class="row">
+		<div class="col">
 		<h1 style="font-family:verdana;">Find a technician near you</h1>
-		<form action="{{pathFor 'searchresults'}}">
-			<input type="text" style = "text-align:center;" placeholder="Address..." size="40" autocomplete="off" id="address-selection-input" value="">
-			<button type="submit" class="fa fa-search btn btn-info">Search</button>
-		</form>
+			<input type="text" style = "text-align:center;" placeholder="Address.." size="40" autocomplete="off" id="address-selection-input" value="">
+			<button type="submit" class="fa fa-search btn btn-info">search</button>
 
 
-			<span class="loginbutton"><button type= "button" style = "float:right;" class="btn btn-primary btn-lg" onclick="window.location.href='/SignUp'">Sign Up</button></span>
+<div class="col">
+			<div class="loginbutton"><button type= "button" style = "float:right;" class="btn btn-primary btn-lg" onclick="window.location.href='/SignUp'">Sign Up</button></div>
 <br>
 <br>
-			<span class="loginbutton"><button type= "button" style = "float:right;" class="btn btn-link" onclick="window.location.href='/WelcomeBack'">Login</button></span>
+			<div class="loginbutton"><button type= "button" style = "float:right;" class="btn btn-link" onclick="window.location.href='/WelcomeBack'">Login</button></div>
 	</div>
-
+</div>
+</div>
+</div>
 
 
 
