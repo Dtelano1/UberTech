@@ -4,3 +4,20 @@
 
 
 }
+
+
+
+@keyframes example {
+    from {background-color: white;}
+    to {background-color: blue;}
+}
+
+
+div {
+
+    background-color: white;
+    animation-name: example;
+    animation-duration: 0s;
+}
+
+/* The animation code */
