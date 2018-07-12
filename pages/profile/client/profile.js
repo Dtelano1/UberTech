@@ -3,8 +3,8 @@ Template.profile.events({
     Meteor.call("test1",function(e,r){console.log(r)});
     const review = $("#review").val();
     const name = $("#name").val();
-    const rating = $("#rating").val();
-    console.log("review="+review)
+    const rating = $("#js-ratings").val();
+    console.log(`values are ${JSON.stringify([review,name,rating])}`)
     if(review==""||rating==""||name==""){
       alert("invalid entry")
     }
