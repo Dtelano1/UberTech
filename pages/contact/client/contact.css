@@ -1,17 +1,10 @@
+#heading{color:black;
+  font-family: "Times New Roman", Times, serif;
 
+}
 .head h1{
   font-size:100px;
 }
-
-
-
-#heading1{
-  color:blue;
-  font-family: "Impact";
-  font-size: 20px
-}
-
-
 #boom
 {
   color:white;
@@ -34,6 +27,7 @@
     animation-name: example;
     animation-duration: 40s;
     animation-iteration-count: infinite;
+    margin-bottom:500px;
 }
 
 /* The animation code */
