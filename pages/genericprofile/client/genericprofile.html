@@ -1,0 +1,74 @@
+<template name="genericprofile">
+
+  <div class="jumbotron">
+    <h1>Profile</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-md-5 col-md-offset-1 bg-info">
+      <h1>George Techman</h1>
+      <img src="https://www.idyllwildarts.org/wp-content/uploads/2016/09/blank-profile-picture.jpg" width="100">
+      <p>★ ★ ★ ★ ☆ (14 Reviews)</p>
+      <p>4/5 Stars</p>
+      <h1>Information</h1>
+      <p>
+      Degrees/Schooling: Bachelor's at UMass
+      <br>
+      Company Affiliation: Apple
+      <br>
+      Specialization: Phones/Computers
+      </p>
+
+      <h1>Products Fixed</h1>
+      <img src="https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2017/08/broken_iphone7_rose_gold.jpg?itok=0xs7b0oU" width="100">
+      <img src="https://i.amz.mshcdn.com/OtmyGjULyqpIqVWsJTAWpX3eO8Q=/950x534/filters:quality(90)/2016%2F02%2F05%2Fa3%2FAP_11256701.26bc9.jpg" width="100">
+      <img src="https://i.imgflip.com/140zqm.jpg" width="100">
+
+    </div>
+
+
+
+    <div class="col-md-5 col-md-offset-1 bg-info">
+      <h1>User Feedback</h1>
+      {{#each Reviews}}
+        {{> review}}
+      {{/each}}
+      <h3>Write Your Own Review:</h3>
+
+      <form>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name" required>
+        </div>
+        <div>
+          <label for="msg">Review:</label>
+          <textarea id="review" name="user_message"></textarea>
+        </div>
+        <div>
+          <label for="rating">Rating:</label>
+          <input type="number" id="rating" name="quantity" min="1" max="5" required>
+        </div>
+        <div class="button">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="col-md-5 col-md-offset-1 bg-info">
+      <h1>Rating Test</h1>
+      <div class="rating">
+      <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="review">
+  <h3>{{name}}</h3>
+  {{review}}
+  <br>
+  {{rating}}/5 Stars
+  <br>
+  <hr>
+</template>
