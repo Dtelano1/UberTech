@@ -9,7 +9,7 @@
     <tbody>
       {{#each mechanic in profiles}}
         <tr>
-          <td>{{mechanic.name}}</td>
+          <td><a href="/genericprofile/{{mechanic._id}}">{{mechanic.name}}</a></td>
           <td>{{mechanic.rating}}/5, from {{mechanic.reviews}} reviews</td>
         </tr>
       {{/each}}
