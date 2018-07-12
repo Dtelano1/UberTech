@@ -7,7 +7,7 @@ Template.mechanicprofile.events({
     phone = instance.$('#js-phone').val();
     console.log('just read ' + phone);
     repairs = instance.$('#js-repairs').val();
-    Profiles.insert({name:name,owner:Meteor.userId(),email:email,phone:phone,repairs:repairs});
+    Profiles.insert({name:name,owner:Meteor.userId(),email:email,phone:phone,repairs:repairs,rating:5,reviews:0});
     console.log(Profiles.findOne({name:name}));
   }
 })
