@@ -5,3 +5,13 @@
 .loginbutton {
   text-align: right;
 }
+
+.icons{
+  display: inline;
+  margin-left: 15px;
+}
+
+.center-icon{
+  display: inherit;
+  margin: 35%;
+}
