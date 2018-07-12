@@ -1,16 +1,25 @@
 <template name="about">
 <h1>About</h1>
 
-Who are we???
-Uber tech is the solution to every community's technological needs. We collaborate with hardware stores, software developers, technicians to bring your needed technological support right to your door.
-We have a myriad of technological workers at hand, in order to cater to your specific needs. Whether you have a broken microwave or a confusing new phone, we will provide you with the help and guidance you need to live in a technological world.
+Who are we?
+UberTech is the solution to every community's technological needs. We collaborate with hardware stores, software developers, and technicians to bring your needed technological support right to your door.
+We have a myriad of technological workers at hand in order to cater to your specific needs. Whether you have a broken microwave or a confusing new phone, we will provide you with the help and guidance you need to live in a technological world.
 
 <div class="default">
 	<h1>Contact Us</h1>
 		<p> You can contact UberTech at
 		<a href="mailto:UberTech18@gmail.com">UberTech18@gmail.com</a>
 		 or call +1 800-823-7832 or +1 800-UberTec </p>
+		 <p> Follow us on Twitter
+		<a href ="http://twitter.com/ubertechonline"> @UberTechOnline </a>
+			 </p>
  </div>
+ 
+ <body>
+ <h1>Twitter Feed</h1>
+ 	<a href="https://twitter.com/intent/tweet?button_hashtag=UberTechOnline&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #UberTechOnline</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+ </body>
+ <br>
 
 Our Fabulous Team:
 <table class="table table-bordered table-striped">
@@ -26,9 +35,12 @@ Our Fabulous Team:
 
 </template>
 
+
 <template name="teamrow">
    <tr>
    	  <td>{{t.name}}</td>
 			<td><a href="mailto:{{t.email}}.com">{{t.email}}</a> </td>
    </tr>
+
+
 </template>

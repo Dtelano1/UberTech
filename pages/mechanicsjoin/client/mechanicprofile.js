@@ -6,13 +6,13 @@ Template.mechanicprofile.events({
     console.log('just read ' +email );
     phone = instance.$('#js-phone').val();
     console.log('just read ' + phone);
-    iphone = instance.$( "input[type=checkbox][name=#js-iphone]:checked" ).val();
+    iphone = instance.$("#js-iphone").is(':checked');
     console.log('just read ' + iphone);
-    android = instance.$( "input[type=checkbox][name=#js-android]:checked" ).val();
+    android = instance.$("#js-android").is(':checked');
     console.log('just read ' + android);
-    imac = instance.$( "input[type=checkbox][name=#js-imac]:checked" ).val();
+    imac = instance.$("#js-imac").is(':checked');
     console.log('just read ' + imac);
-    pc = instance.$( "input[type=checkbox][name=#js-pc]:checked" ).val();
+    pc = instance.$("#js-pc").is(':checked');
     console.log('just read ' + pc);
     this.user.name = name;
     this.user.email = email;
@@ -21,6 +21,7 @@ Template.mechanicprofile.events({
     this.user.android = android;
     this.user.imac = imac;
     this.user.pc = pc;
-    Profiles.update(this.user._id,this.user);
+    this.user.isMechanic = true;
+    Profiles.save(this.user._id,this.user);
   }
 })
