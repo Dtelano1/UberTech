@@ -7,6 +7,7 @@ Template.profile.events({
     console.log("review="+review)
     if(review==""||rating==""||name=="")
     return
+    if rating!==(1||2||3||4||5)
 
     Reviews.insert({
         review:review, name:name, rating:rating,
