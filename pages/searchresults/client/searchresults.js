@@ -1,5 +1,5 @@
 Template.searchresults.helpers({
   profiles: function(){
-    return Profiles.find({},{name});
+    const profiles = Profiles.find({}).fetch()
   }
 })
