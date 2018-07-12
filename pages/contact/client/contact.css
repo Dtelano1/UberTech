@@ -1,10 +1,24 @@
+<<<<<<< HEAD
 #heading{color:black;
   font-family: "Times New Roman", Times, serif;
 
 }
 .head h1{
   font-size:100px;
+=======
+
+
+
+#heading{color:blue;
+  font-family: "Impact";
+  font-size: 20px
+
+#heading{color:blue;
+  font-family: "Times New Roman", Times, serif;
+
+>>>>>>> f90da05d8cacb04e83696abfa9bed18318e4f2be
 }
+
 #boom
 {
   color:white;
