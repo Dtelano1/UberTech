@@ -1,4 +1,7 @@
-.loginbutton {
+.signupbutton {
   text-align: right;
   margin-top:-15px;
+}
+.loginbutton {
+  text-align: right;
 }
