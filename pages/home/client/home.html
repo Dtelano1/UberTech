@@ -3,24 +3,29 @@
 <div class="container">
 	<div class="row">
 		<div class="col">
-		<h1 style="font-family:verdana;">Find a technician near you</h1>
-			<input type="text" style = "text-align:center;" placeholder="Address.." size="40" autocomplete="off" id="address-selection-input" value="">
-			<button type="submit" class="fa fa-search btn btn-info">Search</button>
-
-
-<div class="col">
+			<h1 style="font-family:verdana;">Find a technician near you</h1>
+		</div>
+		<div class="col">
 			<div class="loginbutton"><button type= "button" style = "float:right;" class="btn btn-primary btn-lg" onclick="window.location.href='/SignUp'">Sign Up</button></div>
-<br>
-<br>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<form action="{{pathFor 'searchresults'}}"> <!--please stop deleting the form here; it is necessary for the code to function -->
+				<input type="text" style = "text-align:center;" placeholder="Address.." size="40" autocomplete="off" id="address-selection-input" value="">
+				<button type="submit" class="fa fa-search btn btn-info">Search</button>
+			</form>
+		</div>
+		<div class="col">
 			<div class="loginbutton"><button type= "button" style = "float:right;" class="btn btn-link" onclick="window.location.href='/WelcomeBack'">Login</button></div>
+<<<<<<< HEAD
 <br>
 <br>
+=======
+		</div>
+>>>>>>> 57e45546d40afa9c560a48eadd56363753c23236
 	</div>
 </div>
-</div>
-</div>
-
-
 
 
 <center>

@@ -3,16 +3,20 @@ Template.profile.events({
     Meteor.call("test1",function(e,r){console.log(r)});
     const review = $("#review").val();
     const name = $("#name").val();
-    const rating = $("#rating").val();
-    console.log("review="+review)
-    if(review==""||rating==""||name=="")
-    return
-    if rating!==(1||2||3||4||5)
-    return
+    const rating = $("#js-ratings").val();
+    console.log(`values are ${JSON.stringify([review,name,rating])}`)
+    if(review==""||rating==""||name==""){
+      alert("invalid entry")
+    }
+    else {
+      Reviews.insert({
+          review:review, name:name, rating:rating,
+      });
 
-    Reviews.insert({
-        review:review, name:name, rating:rating,
-    });
+    }
+
+
+
   }
 });
 
