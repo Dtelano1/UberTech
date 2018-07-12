@@ -1,7 +1,7 @@
-.signupbutton {
-  text-align: right;
-  margin-top:-15px;
+.container{
+  column-fill: auto;
 }
+
 .loginbutton {
   text-align: right;
 }
