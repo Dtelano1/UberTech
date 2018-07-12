@@ -2,7 +2,7 @@
 
 	<div>
 		<input type="text" stle = "text-align:center;" class="ue-bn ue-bo ue-bs ue-br ue-c2 ue-bq ue-kd ue-ce ue-cf ue-cg ue-ch ue-ci ue-cj ue-ck ue-cl ue-n ue-cm fontBase_ ue-bn ue-bo ue-c2 ue-c3 ue-c4 ue-bs undefined" placeholder="Address.." size="40" autocomplete="off" id="address-selection-input" value="">
-			<button type="submit" class="fa fa-search">search</button>
+			<form action="{{pathFor 'searchresults'}}"><button class="fa fa-search">search</button></form>
 			<div class="loginbutton"><button type= "button" onclick="window.location.href='/SignUp'">Sign Up</button></div>
 			<br>
 			<div class="loginbutton"><button type= "button" onclick="window.location.href='/WelcomeBack'">Login</button></div>
@@ -30,8 +30,8 @@
 
 
 
-	  <input type="text" style = 'text-align:left;' placeholder="Address.." size= "100">
-		<form action="{{pathFor 'searchresults'}}"><input type="submit" value="Search" /></form>
+	  <!--<input type="text" style = 'text-align:left;' placeholder="Address.." size= "100">
+		<form action="{{pathFor 'searchresults'}}"><button class="fa fa-search">search</button></form> -->
 	</div>
 
 
