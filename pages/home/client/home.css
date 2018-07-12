@@ -1,17 +1,7 @@
-.signupbutton {
-  text-align: right;
-  margin-top:-15px;
+.container{
+  column-fill: auto;
 }
+
 .loginbutton {
   text-align: right;
-}
-
-.icons{
-  display: inline;
-  margin-left: 15px;
-}
-
-.center-icon{
-  display: inherit;
-  margin: 35%;
 }
