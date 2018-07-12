@@ -8,6 +8,7 @@ Template.profile.events({
     if(review==""||rating==""||name=="")
     return
     if rating!==(1||2||3||4||5)
+    return
 
     Reviews.insert({
         review:review, name:name, rating:rating,
