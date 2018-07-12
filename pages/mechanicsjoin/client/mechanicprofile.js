@@ -21,6 +21,7 @@ Template.mechanicprofile.events({
     this.user.android = android;
     this.user.imac = imac;
     this.user.pc = pc;
-    Profiles.update(this.user._id,this.user);
+    this.user.isMechanic = true;
+    Profiles.save(this.user._id,this.user);
   }
 })
