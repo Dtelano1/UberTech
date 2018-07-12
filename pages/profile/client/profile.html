@@ -39,7 +39,11 @@
       <h3>John Smith</h3>
       <p>★ ☆ ☆ ☆ ☆
       Fixed my iPhone perfectly, but didn't say "bless you" when I sneezed. 1/5 stars.</p>
+      {{#each Reviews}}
+        {{> review}}
+      {{/each}}
       <h3>Write Your Own Review:</h3>
+
       <form>
         <div>
           <label for="name">Name:</label>
@@ -53,9 +57,6 @@
           <button type="submit">Submit</button>
         </div>
       </form>
-<!--      <textarea rows="5" cols="50"></textarea>
-      <br>
-      <button type="submit">Submit</button>  -->
     </div>
 
 
@@ -66,4 +67,8 @@
       </div>
     </div>
   </div>
+</template>
+
+<template name="review">
+  name:{{name}}<br>review:{{review}}<br><hr>
 </template>
