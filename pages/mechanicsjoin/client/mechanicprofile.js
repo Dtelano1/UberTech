@@ -14,14 +14,19 @@ Template.mechanicprofile.events({
     console.log('just read ' + imac);
     pc = instance.$("#js-pc").is(':checked');
     console.log('just read ' + pc);
-    this.user.name = name;
-    this.user.email = email;
-    this.user.phone = phone;
-    this.user.iphone = iphone;
-    this.user.android = android;
-    this.user.imac = imac;
-    this.user.pc = pc;
-    this.user.isMechanic = true;
-    Profiles.save(this.user._id,this.user);
+    //console.log("die in whole");
+    //this.user.name = name;
+  //  this.user.email = email;
+    //this.user.phone = phone;
+  //  this.user.iphone = iphone;
+  //  this.user.android = android;
+  //  this.user.imac = imac;
+  //  this.user.pc = pc;
+  //  this.user.isMechanic = true;
+    //console.log('die in hole');
+    //Pokedex.insert(ename:"dieinsect");
+    Profiles.insert({name:name,owner:Meteor.userId(),email:email,phone:phone,iphone:iphone,android:android,imac:imac,pc:pc});
+    console.log(Profiles.findOne({name:name}));
+    //Profiles.update({name:name,email:email,phone:phone,iphone:iphone,android:android,imac:imac,pc:pc});
   }
 })
