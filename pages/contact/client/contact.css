@@ -17,7 +17,7 @@ div {
 
     background-color: white;
     animation-name: example;
-    animation-duration: 40s;
+    animation-duration: 0s;
 }
 
 /* The animation code */
