@@ -5,14 +5,18 @@ Template.profile.events({
     const name = $("#name").val();
     const rating = $("#rating").val();
     console.log("review="+review)
-    if(review==""||rating==""||name=="")
-    return
-    if(rating!=(1||2||3||4||5))
-    return
+    if(review==""||rating==""||name==""){
+      alert("invalid entry")
+    }
+    else {
+      Reviews.insert({
+          review:review, name:name, rating:rating,
+      });
 
-    Reviews.insert({
-        review:review, name:name, rating:rating,
-    });
+    }
+
+
+
   }
 });
 
