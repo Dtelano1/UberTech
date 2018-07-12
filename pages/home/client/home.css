@@ -1,10 +1,7 @@
-.container{
-  column-fill: auto;
-}
-
 .loginbutton {
   text-align: right;
 }
+<<<<<<< HEAD
 
 
 .icons{
@@ -16,3 +13,5 @@
   display: inherit;
   margin: 35%;
 }
+=======
+>>>>>>> 166b40901f3aa6923090f7cad53aa5dc7ec00128
