@@ -1,6 +1,6 @@
 Template.profile.events({
-  "click .button": function(event,instance){
-    Meteor.call("test1",function(e,r){console.log(r)});
+  "click #button-review": function(event,instance){
+    //Meteor.call("test1",function(e,r){console.log(r)});
     const review = $("#review").val();
     const name = $("#name").val();
     const rating = $("#js-ratings").val();
@@ -12,18 +12,20 @@ Template.profile.events({
       Reviews.insert({
           review:review, name:name, rating:rating,
       });
+    }
+  },
 
-    "click .button": function(event,instance){
-      Meteor.call("test2",function(e,r){console.log(r)});
-      const device = $("#submit.device").val();
-      const help = $("#submit.help").val();
+    "click #button-request": function(event,instance){
+      //Meteor.call("test2",function(e,r){console.log(r)});
+      const device = $("#submit-device").val();
+      const help = $("#submit-help").val();
       console.log(`values are ${JSON.stringify([device,help])}`)
 
     }
 
 
 
-  }
+
 });
 
 Template.profile.helpers({
