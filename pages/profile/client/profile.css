@@ -62,3 +62,18 @@ button {
      between the labels and their text fields */
   margin-left: .5em;
 }
+
+
+#color {
+    height: 150px;
+    width: 1150px;
+    background: DodgerBLue; /* For browsers that do not support gradients */
+    background: repeating-radial-gradient(lightblue, lightblue 10%, DodgerBLue 15%); /* Standard syntax (must be last) */
+}
+
+.color {
+  color:black;
+  font-size:40px;
+
+
+}
