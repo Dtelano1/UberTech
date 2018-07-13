@@ -14,6 +14,7 @@
     animation-iteration-count: infinite;
 
 }
+<<<<<<< HEAD
 
 /* The animation code */
 @keyframes example {
@@ -25,3 +26,5 @@
     75% {color:lightblue;}
     100% {color:black;}
 }
+=======
+>>>>>>> 08a3cd81093710d9a85516c1a941a1df8295b789
