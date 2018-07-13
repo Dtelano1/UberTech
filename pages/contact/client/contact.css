@@ -40,3 +40,31 @@
     75% {color:lightblue;}
     100% {color:black;}
 }
+/*animation code for logo */
+#Movinglogo {
+    width: 0px;
+    height: 0px;
+
+    position: relative;
+    z-index: 1000;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: move;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    /* Standard syntax */
+    animation-name: move;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    margin-right: -2000px;
+    margin-top: -500px;
+    
+
+
+
+  }

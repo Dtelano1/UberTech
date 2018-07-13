@@ -18,7 +18,6 @@ Template.genericprofile.events({
 
 Template.genericprofile.helpers({
   Reviews: function() {
-    const hiddenID = $('#hiddenID').val();
-    return Reviews.find({mechanic:hiddenID}).fetch()
+    return Reviews.find({mechanic:this._id});
   }
 })

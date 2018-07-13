@@ -1,31 +1,25 @@
 <template name="mechanicprofile">
-  Full Name:
-  <br>
-  <input type="text" id="js-name" value="{{user.name}}">
-  <br>
-  Email:
-  <br>
-  <input type="text" id="js-email" value="{{user.email}}">
-  <br>
-  Phone Number:
-  <br>
-  <input type="text" id="js-phone" value="{{user.phone}}">
-  <br>
-  Education or Qualifications:
-  <br>
-  <input type="text" id="js-education" value="{{user.education}}"><br>
-  Able to Repair:
-  <br>
-  <!--<input type="checkbox" id="js-iphone"> iPhones
-  <br>
-  <input type="checkbox" id="js-android"> Androids
-  <br>
-  <input type="checkbox" id="js-imac"> iMacs
-  <br>
-  <input type="checkbox" id="js-pc"> Windows PCs
-  <br>
-  <button id="js-submit" class="btn btn-info">Create Profile</button>-->
-  <input type="text" id="js-repairs" value="{{user.repairs}}">
+  {{#if currentUser}}
+      <h1>Become a Mechanic Here!</h1>
+      <br>
+      Full Name:
+      <br>
+      <input type="text" id="js-name" value="{{user.name}}">
+      <br>
+      Email:
+      <br>
+      <input type="text" id="js-email" value="{{user.email}}">
+      <br>
+      Phone Number:
+      <br>
+      <input type="text" id="js-phone" value="{{user.phone}}">
+      <br>
+      Education or Qualifications:
+      <br>
+      <input type="text" id="js-education" value="{{user.education}}"><br>
+      Able to Repair:
+      <br>
+      <input type="text" id="js-repairs" value="{{user.repairs}}">
 
 <button onclick="location.href=''" id="js-submit" class="btn btn-info"> Create Profile</button>
 
@@ -68,7 +62,12 @@
 </div>
 
 
-
+<button onclick="location.href=''" id="js-submit" class="btn btn-info"> Create Profile</button>
+{{else}}
+<br>
+Log into Google before you create your account!
+{{> loginButtons}}
+{{/if}}
 
 
 </template>

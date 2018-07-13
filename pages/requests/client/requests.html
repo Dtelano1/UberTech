@@ -2,6 +2,26 @@
 
 <h1>Requests</h1>
 <br>
-<button id="button-reveal" type="submit" class="btn btn-primary">Reveal Requests</button>
 
+{{#each Requests}}
+  {{> request}}
+{{/each}}
+
+</template>
+
+<template name="request">
+  <table class="table table-bordered table-striped">
+  	<thead>
+  		<tr><th>Device</th><th>Request</th></tr>
+  	</thead>
+  	<tbody>
+  		{{#each Requests}}
+    		{{> request}}
+  		{{/each}}
+  	</tbody>
+    <tr>
+      <td>{{device}}</td>
+      <td>{{help}}</td>
+    </tr>
+  </table>
 </template>
