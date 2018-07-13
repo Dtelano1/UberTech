@@ -1,10 +1,12 @@
 .text{color:black;
+  text-align: left;
   font-family: "Times New Roman", Times, serif;
   margin-left: 200px;
   font-size:30px;
 }
 
 #FAQS{color:black;
+  text-align: left;
   font-family: "Times New Roman", Times, serif;
   margin-left: 200px;
   margin-bottom:500px;

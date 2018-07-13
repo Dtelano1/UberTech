@@ -1,29 +1,29 @@
 
 #move {
-    width: 200px;
+    width:500px;
     height: 100px;
 
     position: relative;
     z-index: 1000;
     /* Safari 4.0 - 8.0 */
     -webkit-animation-name: move;
-    -webkit-animation-duration: 5s;
+    -webkit-animation-duration: 1s;
     -webkit-animation-timing-function: linear;
-    -webkit-animation-delay: 2s;
+
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
     /* Standard syntax */
     animation-name: move;
-    animation-duration: 20s;
+    animation-duration: 10s;
     animation-timing-function: linear;
-    animation-delay: 2s;
+
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes move {
     0%   {color: lightblue; left: 0px; top: 0px;}
-  50%  {color: blue; left: 1000px; top: 0px;}
-    100%  {color: lightblue; left: 1000px; top: 0px;}
+  50%  {color: blue; left: 400px; top: 0px;}
+    100%  {color: lightblue; left: 800px; top: 0px;}
 
 }
