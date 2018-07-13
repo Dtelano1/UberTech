@@ -19,61 +19,75 @@
       <input type="text" id="js-education" value="{{user.education}}"><br>
       Able to Repair:
       <br>
-      <input type="text" id="js-repairs" value="{{user.repairs}}">
-    <br>  Zip Code:<br>
-
+      <input type="checkbox" id="js-iphone"> iPhones
+      <br>
+      Zip Code:
+      <br>
       <input type="text" id="js-zipcode" value="{{user.zipcode}}">
+      <br>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">1</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+        <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+      </div>
 
-<button onclick="location.href=''" id="js-submit" class="btn btn-info"> Create Profile</button>
-
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-
-<br>
-<br>
-<br>
-<br>
+      <button onclick="location.href=''" id="js-submit" class="btn btn-info"> Create Profile</button>
 
 
 
 
-<div class="col-sm-4 text-center">
-   <img src="http://www.diploma-degree.com/Degree/700-42740-Electronics+Engineering+Degree.jpg" width="130">
-    We award you for your effort.  Show your degree and working background for your advertisment!
-</div>
 
-<div class="col-sm-4 text-center">
-   <img src="https://omextemplates.content.office.net/support/templates/en-us/lt16400639.png" width="130">
-
-Become your own employer! Build your own schedule and achieve to what you need.
-</div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
 
 
 
-<div class="col-sm-4 text-center">
-	<img src="http://www.smokefreeengland.co.uk/wp-content/uploads/2014/12/business-man-driving-car1.jpg" width="130">
 
-  Find quick work, at your own pace.
-</div>
+      <br>
+      <br>
+      <br>
+      <br>
 
 
 
-{{else}}
-<br>
-Log into Google before you create your account!
-{{> loginButtons}}
-{{/if}}
+
+      <div class="col-sm-4 text-center">
+        <img src="http://www.diploma-degree.com/Degree/700-42740-Electronics+Engineering+Degree.jpg" width="130">
+        We award you for your effort.  Show your degree and working background for your advertisment!
+      </div>
+
+      <div class="col-sm-4 text-center">
+        <img src="https://omextemplates.content.office.net/support/templates/en-us/lt16400639.png" width="130">
+
+        Become your own employer! Build your own schedule and achieve to what you need.
+      </div>
+
+
+
+      <div class="col-sm-4 text-center">
+	       <img src="http://www.smokefreeengland.co.uk/wp-content/uploads/2014/12/business-man-driving-car1.jpg" width="130">
+
+         Find quick work, at your own pace.
+       </div>
+
+
+
+  {{else}}
+    <br>
+    Log into Google before you create your account!
+    {{> loginButtons}}
+  {{/if}}
 
 
 </template>
