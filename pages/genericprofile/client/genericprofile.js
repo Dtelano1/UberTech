@@ -3,9 +3,9 @@ Template.genericprofile.events({
     Meteor.call("test1",function(e,r){console.log(r)});
     const review = $("#review").val();
     const name = $("#name").val();
-    const rating = $("#rating").val();
-    const hiddenID= instance.$('#hiddenID').val();
-    console.log("review="+review)
+    const rating = $("#rating").val().substr(0,1);
+    const hiddenID = $('#hiddenID').val();
+    console.log("review="+review);
     if(review==""||rating==""||name==""){
       alert("invalid entry");
     }
@@ -16,8 +16,9 @@ Template.genericprofile.events({
 })
 
 
-Template.genericreview.helpers({
-  reviewList: function() {
-    return Reviews.find({mechanic:instance.$('#hiddenID').val()}).fetch();
+Template.genericprofile.helpers({
+  Reviews: function() {
+    const hiddenID = $('#hiddenID').val();
+    return Reviews.find({mechanic:hiddenID}).fetch()
   }
 })
