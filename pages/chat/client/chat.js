@@ -56,8 +56,7 @@ function updateChat() {
         if(data.text){
           /* manage data */
           for (var i = 0; i < data.text.length; i++) {
-            $('#chat-row').append($("
-            "+ data.text[i] +"
+            $('#chat-row').append($("  "+ data.text[i] +"
             "));
           }
         }

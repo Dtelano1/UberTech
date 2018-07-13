@@ -4,6 +4,17 @@
     <p><h2>Ask our technicians questions!</h2></p>
   </div>
 
+  <h1 style= "font-size: 35px; color: darkblue;"> <u>Our Fabulous Team:</u></h1>
+  <table class="table table-bordered table-striped">
+  	<thead>
+  		<tr><th>Name</th><th>Email</th></tr>
+  	</thead>
+  	<tbody>
+  		{{#each person in team}}
+    		{{> teamrow t=person}}
+  		{{/each}}
+  	</tbody>
+  </table>
 
 
 <br>
