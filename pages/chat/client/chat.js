@@ -20,17 +20,6 @@ Template.chat.events({
 //End here
 })
 
-
-const socket = io();
-// Initialize our Feathers client application through Socket.io
-// with hooks and authentication.
-const client = feathers();
-
-client.configure(feathers.socketio(socket));
-client.configure(feathers.hooks());
-// Use localStorage to store our login token
-client.configure(feathers.authentication({
-  storage: window.localStorage
 }));
 
 // Shows the chat page
@@ -53,16 +42,6 @@ client.service('users').find().then(page => {
   users.forEach(addUser);
 });
 
-// Log in either using the given email/password or the token from storage
-function login(credentials) {
-  const payload = credentials ?
-    Object.assign({ strategy: 'local' }, credentials) : {};
-
-  return client.authenticate(payload)
-    .then(showChat)
-    .catch(showLogin);
-}
-});
 document.addEventListener('submit', function(ev) {
   if(ev.target.id === 'send-message') {
     // This is the message text input field
