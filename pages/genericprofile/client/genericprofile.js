@@ -4,28 +4,20 @@ Template.genericprofile.events({
     const review = $("#review").val();
     const name = $("#name").val();
     const rating = $("#rating").val();
+    const hiddenID= instance.$('#hiddenID').val();
     console.log("review="+review)
     if(review==""||rating==""||name==""){
-      alert("invalid entry")
+      alert("invalid entry");
     }
     else {
-      Reviews.insert({
-          review:review, name:name, rating:rating,
-      });
-
+      Reviews.insert({review:review, name:name, rating:rating, mechanic:hiddenID});
     }
-
-
-
   }
-});
+})
 
-Template.genericprofile.helpers({
+
+Template.genericreview.helpers({
   reviewList: function() {
-    return Reviews.find().fetch();
-  }
-  getProfileInfo: function(){
-    return Profiles.findOne(_id:profileClicked);
-    console.log('profileClicked');
+    return Reviews.find({mechanic:instance.$('#hiddenID').val()}).fetch();
   }
 })

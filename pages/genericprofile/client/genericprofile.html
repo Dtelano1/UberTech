@@ -9,13 +9,15 @@
       <h1>{{name}}</h1>
       <img src="https://www.idyllwildarts.org/wp-content/uploads/2016/09/blank-profile-picture.jpg" width="100">
       <!--<p>★ ★ ★ ★ ☆ (14 Reviews)</p> someone can deal with this later maybe-->
-      <p>{{rating}}/5 Stars from {{reviews}} reviews</p>
+      <p>{{rating}}/5 Stars from {{reviews}} reviews</p><input id={{_id}} name="hiddenID" type="hidden" value={{_id}}>
+
       <h1>Information</h1>
       <p>
         Email: {{email}}
         <br>
         Phone Number: {{phone}}
         <br>
+        Education and Qualification: {{education}}<br>
       <!--  Degrees/Schooling: Bachelor's at UMass
         <br>
         Company Affiliation: Apple
@@ -33,7 +35,7 @@
 
 
 
-    <!--<div class="col-md-5 col-md-offset-1 bg-info">
+    <div class="col-md-5 col-md-offset-1 bg-info">
       <h1>User Feedback</h1>
       {{#each Reviews}}
         {{> review}}
@@ -63,15 +65,15 @@
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
       </form>
-    </div>-->
+    </div>
   </div>
 </template>
 
-<!--<template name="review">
+<template name="genericreview">
   <h3>{{name}}</h3>
   {{review}}
   <br>
   {{rating}}/5 Stars
   <br>
   <hr>
-</template>-->
+</template>
