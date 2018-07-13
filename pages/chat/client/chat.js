@@ -20,7 +20,7 @@ Template.chat.events({
 //End here
 })
 
-}));
+});
 
 // Shows the chat page
 function showChat() {
