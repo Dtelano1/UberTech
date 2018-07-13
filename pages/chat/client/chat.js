@@ -20,6 +20,79 @@ Template.chat.events({
 //End here
 })
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+function Chat () {
+/* call update chat function */
+this.update = updateChat;
+/* call send chat function */
+this.send = sendChat;
+/* call get state function */
+this.getState = getState;
+}
+
+function getState() {
+  if(!instanse){
+    instanse = true;
+    /* define AJAX function */
+    $.ajax({
+      type: "POST",
+      url: "ajax.php",
+      data: {'function': 'getState', 'file': file},
+      dataType: "json",
+      success: function(data) {state = data.state;instanse = false;}
+    });
+  }
+}
+//define update chat function
+function updateChat() {
+  if(!instanse){
+    instanse = true;
+    /* define AJAX function */
+    $.ajax({
+      type: "POST",
+      url: "ajax.php",
+      data: {'function': 'update','state': state,'file': file},
+      dataType: "json",
+      success: function(data) {
+        if(data.text){
+          /* manage data */
+          for (var i = 0; i < data.text.length; i++) {
+            $('#chat-row').append($("  "+ data.text[i] +"
+            "));
+          }
+        }
+        /* manage position of current chat */
+        document.getElementById('chat-row').scrollTop = document.getElementById('chat-row').scrollHeight;
+        instanse = false;
+        state = data.state;
+      }
+    });
+  }
+  else {
+    setTimeout(updateChat, 1000);
+  }
+}
+//define send chat function
+function sendChat(msg, name) {
+  updateChat();
+  /* define AJAX function */
+  $.ajax({
+    type: "POST",
+    url: "ajax.php",
+    /* manage message */
+    data: {'function': 'send','message': msg,'nickname': name,'file': file},
+    dataType: "json",
+    success: function(data){
+      updateChat();
+    }
+  });
+=======
+=======
+>>>>>>> fe80d9d255b4b3e0d8bc02af5aaafbd3680a4af5
+=======
+>>>>>>> fe80d9d255b4b3e0d8bc02af5aaafbd3680a4af5
 
 const socket = io();
 // Initialize our Feathers client application through Socket.io
@@ -128,4 +201,11 @@ client.service('messages').on('created', addMessage);
 client.service('users').on('created', addUser);
 
 login();
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> fe80d9d255b4b3e0d8bc02af5aaafbd3680a4af5
+=======
+>>>>>>> fe80d9d255b4b3e0d8bc02af5aaafbd3680a4af5
+=======
+>>>>>>> fe80d9d255b4b3e0d8bc02af5aaafbd3680a4af5
 }
