@@ -74,7 +74,7 @@
     animation-name: move;
     animation-duration: 10s;
     animation-timing-function: linear;
-    animation-delay: 51s;
+    animation-delay: 5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
