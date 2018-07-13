@@ -1,19 +1,30 @@
+.signupbutton {
+  text-align: right;
+  margin-top:-15px;
+}
 .loginbutton {
   text-align: right;
 }
+
+.flash {
+
+    background-color: white;
+    animation-name: example;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+
+}
 <<<<<<< HEAD
 
-
-.icons{
-  display: inline;
-  margin-left: 70px;
-}
-
-.center-icon{
-  display: inherit;
-  margin: 35%;
+/* The animation code */
+@keyframes example {
+    0%   {color: lightblue;}
+    15% {color:blue;}
+    25%  {color: orange;}
+    35%  {color: yellow;}
+    50%  {color: blue;}
+    75% {color:lightblue;}
+    100% {color:black;}
 }
 =======
->>>>>>> 166b40901f3aa6923090f7cad53aa5dc7ec00128
-{
-}
+>>>>>>> 08a3cd81093710d9a85516c1a941a1df8295b789
