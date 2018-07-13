@@ -74,55 +74,50 @@
 
 
 
+
+
 </div>
 <a href="mailto:UberTech18@gmail.com">Email us UberTech18@gmail.com</a>
 <a href="http://m.me/UberTech18">Message us on Facebook</a>
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b47a27bbc30daad"></script>
+<div class="addthis_inline_follow_toolbox"></div>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b47a27bbc30daad"></script>
 </div>
 </center>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b47a27bbc30daad"></script>
-
 <div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <br>
 
 
+  <h1 style= "font-size: 35px; color: darkblue;"> <u>Our Fabulous Team:</u></h1>
 
+  <table class="table table-bordered table-striped">
+  	<thead>
+  		<tr><th>Name</th><th>Email</th></tr>
+  	</thead>
+  	<tbody>
+  		{{#each person in team}}
+    		{{> teamrow t=person}}
+  		{{/each}}
+  	</tbody>
+  </table>
 
 <p>  Call us +1 800-823-7832 or +1 800-UberTec </p>
 </div>
 
+
+
+
+
+
+</template>
+
+<template name="teamrow">
+   <tr>
+   	  <td>{{t.name}}</td>
+			<td><a href="mailto:{{t.email}}.com">{{t.email}}</a> </td>
+   </tr>
 
 
 

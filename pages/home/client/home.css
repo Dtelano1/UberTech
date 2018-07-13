@@ -6,6 +6,10 @@
   text-align: right;
 }
 
+.loginbuttons {
+  margin-right:50px;
+}
+
 .flash {
 
     background-color: white;
@@ -13,6 +17,9 @@
     animation-duration: 40s;
     animation-iteration-count: infinite;
 
+}
+.homepage {
+  background-color: white;
 }
 
 /* The animation code */
