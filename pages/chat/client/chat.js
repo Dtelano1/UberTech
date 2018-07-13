@@ -33,14 +33,6 @@ client.configure(feathers.authentication({
   storage: window.localStorage
 }));
 
-function showLogin(error = {}) {
-  if(document.querySelectorAll('.login').length) {
-    document.querySelector('.heading').insertAdjacentHTML('beforeend', `<p>There was an error: ${error.message}</p>`);
-  } else {
-    document.getElementById('app').innerHTML = loginHTML;
-  }
-}
-
 // Shows the chat page
 function showChat() {
   document.getElementById('app').innerHTML = chatHTML;
@@ -60,15 +52,6 @@ client.service('users').find().then(page => {
   // Add every user to the list
   users.forEach(addUser);
 });
-}
-function getCredentials() {
-  const user = {
-    email: document.querySelector('[name="email"]').value,
-    password: document.querySelector('[name="password"]').value
-  };
-
-  return user;
-}
 
 // Log in either using the given email/password or the token from storage
 function login(credentials) {
@@ -79,33 +62,6 @@ function login(credentials) {
     .then(showChat)
     .catch(showLogin);
 }
-
-document.addEventListener('click', function(ev) {
-  switch(ev.target.id) {
-    case 'signup': {
-      const user = getCredentials();
-
-      // For signup, create a new user and then log them in
-      client.service('users').create(user)
-        .then(() => login(user));
-
-      break;
-    }
-    case 'login': {
-      const user = getCredentials();
-
-      login(user);
-
-      break;
-    }
-    case 'logout': {
-      client.logout().then(() => {
-         document.getElementById('app').innerHTML = loginHTML;
-      });
-
-      break;
-    }
-  }
 });
 document.addEventListener('submit', function(ev) {
   if(ev.target.id === 'send-message') {
