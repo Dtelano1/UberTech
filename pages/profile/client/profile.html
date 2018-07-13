@@ -6,7 +6,7 @@
 
   <div class="row">
     <div class="col-md-5 col-md-offset-1 bg-info">
-      <h1>(Name Here)</h1>
+      <h1>{{user.name}}</h1>
       <img src="https://www.idyllwildarts.org/wp-content/uploads/2016/09/blank-profile-picture.jpg" width="100">
       <p>★ ★ ★ ★ ☆ (# of Reviews)</p>
       <p>4/5 Stars</p>
@@ -19,6 +19,10 @@
       Specialization:
       <br>
       Rates: $10/hour
+      <br>
+      {{user.email}}
+      <br>
+      I can repair: {{user.repairs}}
       </p>
 
       <h1>Products Fixed (Put New Pictures Here)</h1>
