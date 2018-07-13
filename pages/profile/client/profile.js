@@ -13,6 +13,12 @@ Template.profile.events({
           review:review, name:name, rating:rating,
       });
 
+    "click .button": function(event,instance){
+      Meteor.call("test2",function(e,r){console.log(r)});
+      const device = $("#submit.device").val();
+      const help = $("#submit.help").val();
+      console.log(`values are ${JSON.stringify([device,help])}`)
+
     }
 
 
