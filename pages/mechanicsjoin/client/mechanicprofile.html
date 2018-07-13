@@ -1,45 +1,37 @@
 <template name="mechanicprofile">
-  Full Name:
-  <br>
-  <input type="text" id="js-name" value="{{user.name}}">
-  <br>
-  Email:
-  <br>
-  <input type="text" id="js-email" value="{{user.email}}">
-  <br>
-  Phone Number:
-  <br>
-  <input type="text" id="js-phone" value="{{user.phone}}">
-  <br>
-  Education or Qualifications:
-  <br>
-  <input type="text" id="js-education" value="{{user.education}}"><br>
-  Able to Repair:
-  <br>
-  <!--<input type="checkbox" id="js-iphone"> iPhones
-  <br>
-  <input type="checkbox" id="js-android"> Androids
-  <br>
-  <input type="checkbox" id="js-imac"> iMacs
-  <br>
-  <input type="checkbox" id="js-pc"> Windows PCs
-  <br>
-  <button id="js-submit" class="btn btn-info">Create Profile</button>-->
-  <input type="text" id="js-repairs" value="{{user.repairs}}">
+  {{#if currentUser}}
+      Full Name:
+      <br>
+      <input type="text" id="js-name" value="{{user.name}}">
+      <br>
+      Email:
+      <br>
+      <input type="text" id="js-email" value="{{user.email}}">
+      <br>
+      Phone Number:
+      <br>
+      <input type="text" id="js-phone" value="{{user.phone}}">
+      <br>
+      Education or Qualifications:
+      <br>
+      <input type="text" id="js-education" value="{{user.education}}"><br>
+      Able to Repair:
+      <br>
+      <input type="text" id="js-repairs" value="{{user.repairs}}">
 
 
-  <p style= "font-size: 25px">
+      <p style= "font-size: 25px">
 
-      Become your own employer! Build your own schedule and achieve to what you need.
+          Become your own employer! Build your own schedule and achieve to what you need.
 
-  </p>
-    <p style= "font-size: 25px">
-    We award you for your effort.  Show your degree and working background for your advertisment!
-  </p>
+      </p>
+        <p style= "font-size: 25px">
+        We award you for your effort.  Show your degree and working background for your advertisment!
+      </p>
 
-  <p style= "font-size: 25px">
-      Find quick work, at your own pace.
-    </p>
+      <p style= "font-size: 25px">
+          Find quick work, at your own pace.
+        </p>
 
 
 
@@ -47,7 +39,12 @@
 
 
 
-  <button onclick="location.href=''" id="js-submit" class="btn btn-info"> Create Profile</button>
+      <button onclick="location.href=''" id="js-submit" class="btn btn-info"> Create Profile</button>
+  {{else}}
+    <br>
+    Log into Google before you create your account!
+    {{> loginButtons}}
+  {{/if}}
 
 
 </template>

@@ -18,9 +18,7 @@
         Phone Number: {{phone}}
         <br>
         Education and Qualification: {{education}}<br>
-      <!--  Degrees/Schooling: Bachelor's at UMass
-        <br>
-        Company Affiliation: Apple
+        <!--Company Affiliation: Apple
         <br>-->
         Can fix: {{repairs}}
         <br>
@@ -37,8 +35,13 @@
 
     <div class="col-md-5 col-md-offset-1 bg-info">
       <h1>User Feedback</h1>
-      {{#each Reviews}}
-        {{> review}}
+      {{#each review in Reviews}}
+        <h3>{{review.name}}</h3>
+        {{review.review}}
+        <br>
+        {{review.rating}}/5 Stars
+        <br>
+        <hr>
       {{/each}}
       <h3>Write Your Own Review:</h3>
 
@@ -69,11 +72,11 @@
   </div>
 </template>
 
-<template name="genericreview">
+<!--<template name="genericreview">
   <h3>{{name}}</h3>
   {{review}}
   <br>
   {{rating}}/5 Stars
   <br>
   <hr>
-</template>
+</template>-->
