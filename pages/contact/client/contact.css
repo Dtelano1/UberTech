@@ -42,8 +42,7 @@
 }
 /*animation code for logo */
 #Movinglogo {
-    width: 0px;
-    height: 0px;
+
 
     position: relative;
     z-index: 1000;
@@ -63,8 +62,12 @@
     animation-direction: alternate;
     margin-right: -2000px;
     margin-top: -500px;
-    
+
 
 
 
   }
+
+@keyframes move{
+  100% {margin-left: 65%}
+}
