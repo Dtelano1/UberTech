@@ -46,6 +46,18 @@ Template.profile.events({
 Template.profile.helpers({
   Reviews: function() {
     return Reviews.find().fetch()
+  },
+  Average: function() {
+    var reviews = Reviews.find().fetch();
+    var total = 0;
+    for (var i = 0; i < reviews.length; i++) {
+      total += parseInt(reviews[i].rating.split(" ")[0])
+    }
+
+    return total/(reviews.length)
+  },
+  ReviewCount: function() {
+    return Reviews.find().fetch().length
   }
 })
 /*
