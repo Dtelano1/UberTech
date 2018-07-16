@@ -65,9 +65,20 @@
           </select>
         </div>
         <div class="button">
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button id="button-review" type="submit" class="btn btn-primary">Submit</button>
         </div>
       </form>
+    </div>
+    <div class="col-md-5 col-md-offset-1 bg-info">
+      <h1>Request Help</h1>
+      <p>What device do you need help with?</p>
+      <textarea id="submit-device" name="user_device"></textarea>
+      <p>What is wrong with the device?</p>
+      <textarea id="submit-help" name="user_request"></textarea>
+      <p>
+        <br>
+        <button id="button-request" type="button" class="btn btn-primary">Request Help</button>
+      </p>
     </div>
   </div>
 </template>
