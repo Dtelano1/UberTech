@@ -1,5 +1,5 @@
 Template.genericprofile.events({
-  "click .button": function(event,instance){
+  "click #button-review": function(event,instance){
     Meteor.call("test1",function(e,r){console.log(r)});
     const review = $("#review").val();
     const name = $("#name").val();
@@ -10,8 +10,20 @@ Template.genericprofile.events({
       alert("invalid entry");
     }
     else {
-      Reviews.insert({review:review, name:name, rating:rating, mechanic:hiddenID});
+      Reviews.insert({review:review, name:name, rating:rating, mechanic:this._id});
     }
+  },
+  "click #button-request": function(event,instance){
+    //Meteor.call("test2",function(e,r){console.log(r)});
+    const device = $("#submit-device").val();
+    const help = $("#submit-help").val();
+    $("#submit-device").val("")
+    $("#submit-help").val("");
+    console.log(`values are ${JSON.stringify([device,help])}`)
+    Requests.insert({
+      device:device, help:help, mechanic:this._id
+    });
+
   }
 })
 
