@@ -62,5 +62,5 @@ client.service('messages').on('created', addMessage);
 // We will also see when new users get created in real-time
 client.service('users').on('created', addUser);
 
-login();
-}
+//login();
+//}
