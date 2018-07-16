@@ -8,7 +8,7 @@ Template.searchresults.onCreated(function() {
 Template.searchresults.helpers({
   profiles: function(){
     const instance = Template.instance();
-    const nearbyzips = instance.state.get("zipinfo").zip_codes;
+    const nearbyzips = instance.state.get("zipinfo")
     console.log("nearbyzips = "+JSON.stringify(nearbyzips))
     console.dir(nearbyzips)
     return Profiles.find({zipcode:{$in:nearbyzips}});
@@ -36,7 +36,7 @@ Template.searchresults.events({
         const r = JSON.parse(result);
         console.log("zipinfo parsed as "+JSON.stringify(r));
         console.dir(['zipcode',r]);
-        instance.state.set("zipinfo",r);
+        instance.state.set("zipinfo",r.zip_codes);
       })
 
   }
