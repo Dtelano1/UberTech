@@ -1,5 +1,5 @@
 <template name="searchresults">
-  <h1>Search for a nearby Techie</h1> 
+  <h1>Search for a nearby Techie</h1>
   <div class="row">
     <div class="col-md-6">
       <input type="text" style = "text-align:center;" placeholder="distance in miles" size="40" autocomplete="off" id="distance" value="">
@@ -22,6 +22,28 @@
       {{#each mechanic in profiles}}
         <tr>
           <td><a href="/genericprofile/{{mechanic._id}}">{{mechanic.name}}</a></td>
+          <td>{{mechanic.rating}}/5, from {{mechanic.reviews}} reviews</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+
+
+<h1>ALL TECHIES</h1>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <td>Mechanic</td>
+        <td>zipcode</td>
+        <td>Rating</td>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each mechanic in allprofiles}}
+        <tr>
+          <td><a href="/genericprofile/{{mechanic._id}}">{{mechanic.name}}</a></td>
+          <td>{{mechanic.zipcode}}</td>
           <td>{{mechanic.rating}}/5, from {{mechanic.reviews}} reviews</td>
         </tr>
       {{/each}}

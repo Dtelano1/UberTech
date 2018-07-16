@@ -12,7 +12,11 @@ Template.searchresults.helpers({
     console.log("nearbyzips = "+JSON.stringify(nearbyzips))
     console.dir(nearbyzips)
     return Profiles.find({zipcode:{$in:nearbyzips}});
-  }
+  },
+
+  allprofiles: function(){
+    return Profiles.find();
+  },
 })
 
 Template.searchresults.events({
