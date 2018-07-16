@@ -20,9 +20,10 @@ Template.genericprofile.events({
     $("#submit-device").val("")
     $("#submit-help").val("");
     console.log(`values are ${JSON.stringify([device,help])}`)
-    if(help==''||device==''){
+    if(help==""||device==""){
       alert("invalid entry");
-    } else {
+    }
+    else {
       Requests.insert({
         device:device, help:help, mechanic:this._id
       });
