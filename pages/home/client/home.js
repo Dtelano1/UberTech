@@ -10,5 +10,4 @@ Template.home.helpers({
       }
       return false
     }
-  }
 })
