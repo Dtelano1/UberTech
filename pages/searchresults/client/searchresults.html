@@ -1,4 +1,16 @@
 <template name="searchresults">
+  <h1>Search for a nearby Techie</h1> 
+  <div class="row">
+    <div class="col-md-6">
+      <input type="text" style = "text-align:center;" placeholder="distance in miles" size="40" autocomplete="off" id="distance" value="">
+
+      <input type="text" style = "text-align:center;" placeholder="zipcode" size="40" autocomplete="off" id="zipcode-selection-input" value="">
+      <button type="submit" class="fa fa-search btn btn-info" id="search-js">Search</button>
+    </div>
+    <div class="col-md-6">
+    </div>
+  </div>
+
   <table class="table">
     <thead>
       <tr>

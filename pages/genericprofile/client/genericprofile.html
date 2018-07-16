@@ -18,9 +18,16 @@
         Phone Number: {{phone}}
         <br>
         Education and Qualification: {{education}}<br>
+        zipcode: {{zipcode}} <br> 
         <!--Company Affiliation: Apple
         <br>-->
-        Can fix: {{repairs}}
+        Can fix:
+
+          {{#if iphone}} iphone ,{{/if}}
+          {{#if android}} android, {{/if}}
+          {{#if pc}} pc, {{/if}}
+
+
         <br>
       </p>
 
