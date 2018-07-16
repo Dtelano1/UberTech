@@ -22,6 +22,7 @@ Template.profile.events({
       //Meteor.call("test2",function(e,r){console.log(r)});
       const device = $("#submit-device").val();
       const help = $("#submit-help").val();
+      const name = $("#name").val();
       $("#submit-device").val("")
       $("#submit-help").val("");
       console.log(`values are ${JSON.stringify([device,help])}`)

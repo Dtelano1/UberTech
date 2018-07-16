@@ -25,7 +25,7 @@ Template.genericprofile.events({
     }
     else {
       Requests.insert({
-        device:device, help:help, mechanic:this._id
+        device:device, help:help, name:name, mechanic:this._id
       });
     }
   }
