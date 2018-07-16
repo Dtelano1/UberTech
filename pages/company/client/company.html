@@ -1,16 +1,62 @@
 <template name="company">
 
-<h1>Become A Partner Today!</h1>
+<h1>Submit a Request to Become A Partner Today!</h1>
 <p>
 </p>
 <h2> Advertise Your Bussiness Now!</h2>
 
+{{#if currentUser}}
+
+    <br>
+    Company Name:
+    <br>
+    <input type="text" id="js-name" value="{{company.name}}">
+    <br>
+
+    Company Email:
+    <br>
+    <input type="text" id="js-email" value="{{company.email}}">
+    <br>
+
+    Phone Number:
+    <br>
+    <input type="text" id="js-phone" value="{{company.phone}}">
+    <br>
+
+    Business Affiliation:
+    <br>
+    <input type="text" id="js-affiliation" value="{{company.affiliation}}">
+    <br>
+
+    Approximate Number of Workers:
+    <br>
+    <input type="text" id="js-workers" value="{{company.workers}}">
+    <br>
+
+    Number of Locations:
+    <br>
+    1 <input type="checkbox" id="js-1">
+    <br>
+    2-5 <input type="checkbox" id="js-2">
+    <br>
+    5-10 <input type="checkbox" id="js-5">
+    <br>
+    10+ <input type="checkbox" id="js-+10">
+    <br>
+
+    Zip Code/s: (if more than 1, seperate with a comma and a space, ex: 00000, 00000)
+    <br>
+    <input type="text" id="js-zipcode" value="{{company.zipcode}}">
+    <br>
+    <br>
+
+    <button onclick="location.href=''" id="js-submit" class="btn btn-info"> Submit Request</button>
 
 
-
-
-
-
-
+    {{else}}
+    <br>
+    Log into Google before you create your account!
+    {{> loginButtons}}
+    {{/if}}
 
 </template>

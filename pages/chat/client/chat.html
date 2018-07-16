@@ -9,6 +9,37 @@
   </div>
 
 
+  <header class="title-bar flex flex-row flex-center">
+    <div class="title-wrapper block center-element">
+      <span class="title">Public Chat</span>
+    </div>
+  </header>
+  <div class="flex flex-row flex-1 clear">
+    <aside class="sidebar col col-3 flex flex-column flex-space-between">
+      <header class="flex flex-row flex-center">
+        <h4 class="font-300 text-center">
+          <span class="font-600 online-count">0</span> users
+        </h4>
+      </header>
+      <ul class="flex flex-column flex-1 list-unstyled user-list"></ul>
+      <footer class="flex flex-row flex-center">
+      </footer>
+    </aside>
+    <div class="flex flex-column col col-9">
+      <main class="chat flex flex-column flex-1 clear"></main>
+      <form class="flex flex-row flex-space-between" id="send-message">
+        <input type="text" name="text" class="flex flex-1">
+        <button class="button-primary" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+    <a class="block relative" href="#">
+      <img src="${user.avatar}" alt="" class="avatar">
+      <span class="absolute username"></span>
+    </a>
+
+
 
 
 <br>
@@ -76,35 +107,7 @@
    </div>
  </div>
 
-  <header class="title-bar flex flex-row flex-center">
-    <div class="title-wrapper block center-element">
-      <span class="title">Public Chat</span>
-    </div>
-  </header>
-  <div class="flex flex-row flex-1 clear">
-    <aside class="sidebar col col-3 flex flex-column flex-space-between">
-      <header class="flex flex-row flex-center">
-        <h4 class="font-300 text-center">
-          <span class="font-600 online-count">0</span> users
-        </h4>
-      </header>
-      <ul class="flex flex-column flex-1 list-unstyled user-list"></ul>
-      <footer class="flex flex-row flex-center">
-      </footer>
-    </aside>
-    <div class="flex flex-column col col-9">
-      <main class="chat flex flex-column flex-1 clear"></main>
-      <form class="flex flex-row flex-space-between" id="send-message">
-        <input type="text" name="text" class="flex flex-1">
-        <button class="button-primary" type="submit">Send</button>
-      </form>
-    </div>
-  </div>
 
-    <a class="block relative" href="#">
-      <img src="${user.avatar}" alt="" class="avatar">
-      <span class="absolute username"></span>
-    </a>
 
 
 
