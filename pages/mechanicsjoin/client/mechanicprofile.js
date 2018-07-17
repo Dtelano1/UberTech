@@ -16,14 +16,14 @@ Template.mechanicprofile.events({
   Profiles.insert(
     {name:name,
       owner:Meteor.userId(),
-      iphone:iPhone,
-      android:Android,
-      imac:iMac,
-      pc:PC,
-      email:Email,
-      phone:Phone,
-      zipcode:Zipcode,
-      education:Education,
+      iphone:iphone,
+      android:android,
+      imac:imac,
+      pc:pc,
+      email:email,
+      phone:phone,
+      zipcode:zipcode,
+      education:education,
       rating:5,
       reviews:0});
     console.log(Profiles.findOne({name:name}));
